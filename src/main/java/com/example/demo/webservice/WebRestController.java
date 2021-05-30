@@ -18,6 +18,14 @@ import lombok.AllArgsConstructor;
 public class WebRestController {
 	
 	private PostsRepository postsRepository;
+	/**
+	 * riot api checking / validator from riot developer api checker
+	 * @return
+	 */
+	@GetMapping("/riot.txt")
+	public String riot() {
+		return "5271dbcd-d91f-44a5-a47a-117c1de87770";
+	}
 	
 	@GetMapping("/hello")
 	public String hello() {
