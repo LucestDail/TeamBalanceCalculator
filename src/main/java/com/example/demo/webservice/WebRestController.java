@@ -6,6 +6,8 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.domain.Posts;
@@ -22,7 +24,8 @@ public class WebRestController {
 	 * riot api checking / validator from riot developer api checker
 	 * @return
 	 */
-	@GetMapping("/riot.txt")
+	@RequestMapping("/riot.txt")
+	@ResponseBody
 	public String riot() {
 		return "5271dbcd-d91f-44a5-a47a-117c1de87770";
 	}
